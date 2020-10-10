@@ -39,7 +39,7 @@ Just click on the "Untitled". It pops up a dialog box asking to rename notebook.
 <p>Initially the Jupyter notebook will have only a single cell. A user can give his code in the first cell and check whether everything is working fine or not. To run a particular cell, click on the cell type in the code and click on the <i>Run</i> to execute the cell code.</p>
 <h3>Example:</h3>
 <i>print('Hello world, this is jupyter')</i><br><br>
-<img src="helloworld.png"/>
+<img src="Github%20images/helloworld.png"/>
 <p>Multiple cells in the code helps the user to fragment the code and check its execution seperately. You could notice that on the left side a square bracket after the word <i>In</i>.The square braces will auto fill with a number that indicates the order that you ran the cells. If you run the cell for the first time, the square bracket will be filled with 1. If you run the same cell again it changes to 2 as shown below.</p><br>
   
  <img src="Github%20images/insquare.png"/>
