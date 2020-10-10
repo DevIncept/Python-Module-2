@@ -8,7 +8,7 @@ Errors are the problems in a program due to which the program will stop the exec
 ### Syntax Error
 Syntax errors occurs when we violate the rules of Python and they are the most common kind of error that we get while learning a new language. For example,
 
-![shortcut](Github images/Syntax.jpg)
+![shortcut](Github%20images/Syntax.jpg)
 
 In the aforementioned code we have missed the ':' before the keyword print.
 
@@ -34,44 +34,44 @@ Here are some examples of mistakes which lead to logical errors:
 ## What are Exceptions?
 Even if a statement is syntactically correct, it may still cause an error when executed. Such errors that occur at run-time(or during execution) are known as exceptions. An exception is an event, which occurs during the execution of a program and disrupts the normal flow of the program's instructions. When a program encounters a situation which it cannot deal with, it raises an exception. Let us see some examples in which exceptions occurs.
 
-![shortcut](Github images/Exception.jpg)
+![shortcut](Github%20images/Exception.jpg)
 
 ## Handling Exceptions
 We can handle exceptions in our program by using try block and except block. A critical operation which can raise exception is placed inside the try block and the code that handles exception is written in except block. The Syntax for try-except block can be given as:
 
-![shortcut](Github images/Try_Exception.jpg)
+![shortcut](Github%20images/Try_Exception.jpg)
 
 The picture below shows you how the exception is handled in a program.
 
-![shortcut](Github images/Flowchart.jpg)
+![shortcut](Github%20images/Flowchart.jpg)
 
 Now, let's take a look at an example to better understand how an exception is handled in a program.
 
-![shortcut](Github images/Exception_Example.jpg)
+![shortcut](Github%20images/Exception_Example.jpg)
 
 The output of the aforementioned program is given below:
 
-![shortcut](Github images/Exception_Example_Output.jpg)
+![shortcut](Github%20images/Exception_Example_Output.jpg)
 
 ## Multiple Except Blocks
 Pyhton allows you to have multiple except blocks for a single try block. The block which matches with the exception generated will get executed. A try block can be associated with more than one except block to specify handlers for different exceptions. However, only one handler will be executed. Exception handlers only handle exceptions that occur in the corresponding try block. The syntax for specifying multiple except blocks for a single try block can be given as,
 
-![shortcut](Github images/Multiple_Exception.jpg)
+![shortcut](Github%20images/Multiple_Exception.jpg)
 
 Now, let's take a look at an example to better understand this.
 
-![shortcut](Github images/Multiple_Exception_Example.jpg)
+![shortcut](Github%20images/Multiple_Exception_Example.jpg)
 
 The output of the aforementioned program is given below:
 
-![shortcut](Github images/Multiple_Exception_Example_Output.jpg)
+![shortcut](Github%20images/Multiple_Exception_Example_Output.jpg)
 
 Note that after the execution of the except block, the program control goes to the first statement after the except block for that try block.
 
 ## Error checks vs exception handling
 Exception handling gives us an alternative way to deal with error-prone situations in our code. Instead of performing more checks before we do something to make sure that an error will not occur, we just try to do it – and if an error does occur we handle it. This can allow us to write simpler and more readable code. Let’s look at a more complicated input example – one in which we want to keep asking the user for input until the input is correct. We will try to write this example using the two different approaches:
 
-![shortcut](Github images/Error_checks.jpg)
+![shortcut](Github%20images/Error_checks.jpg)
 
 In the first code snippet, we have to write quite a convoluted check to test whether the user’s input is an integer – first we strip off a minus sign if it exists, and then we check if the rest of the string consists only of digits. But there’s a very simple criterion which is also what we really want to know: will this string cause a ValueError if we try to convert it to an integer? In the second snippet we can in effect check for exactly the right condition instead of trying to replicate it ourselves – something which isn’t always easy to do. For example, we could easily have forgotten that integers can be negative, and written the check in the first snippet incorrectly.
 
@@ -80,21 +80,21 @@ The try...except block can optionally have an *else clause*, which, when present
 
 Now, let's take a look at an example to better understand this.
 
-![shortcut](Github images/Else_example.jpg)
+![shortcut](Github%20images/Else_example.jpg)
 
 The output of the aforementioned program is given below:
 
-![shortcut](Github images/Else_example_output.jpg)
+![shortcut](Github%20images/Else_example_output.jpg)
 
 The *try* block has another optional block called finally which is used to define clean-up actions that must be executed under all circumstances. The *finally* block is always executed before leaving the *try* block. This means that the statements written in *finally* block are executed irrespective of whether an exception has occured or not.
 
 Now, let's take a look at an example to better understand this.
 
-![shortcut](Github images/Finally_example.jpg)
+![shortcut](Github%20images/Finally_example.jpg)
 
 The output of the aforementioned program is given below:
 
-![shortcut](Github images/Finally_example_output.jpg)
+![shortcut](Github%20images/Finally_example_output.jpg)
 
 ## Built-in and User-defined Exceptions
 The following table lists some standard exceptions that are already defined in Python. These built-in exceptions force your program to output an error when something in it goes wrong.
@@ -130,9 +130,9 @@ The following table lists some standard exceptions that are already defined in P
 
 Besides these, Python allows programmers to create their own exceptions by creating a new exception class. The new exception class is derived from the base class *Exception* which is pre-defined in Python. The program given below explains this concept.
 
-![shortcut](Github images/User_defined_example.jpg)
+![shortcut](Github%20images/User_defined_example.jpg)
 
 The output of the aforementioned program is given below:
 
-![shortcut](Github images/User_defined_example_output.jpg)
+![shortcut](Github%20images/User_defined_example_output.jpg)
 
