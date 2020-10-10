@@ -72,5 +72,5 @@ print(student["id"])</td></tr></table><br>
 <p>Type the following command in the python module.</p><br>
 <i>>>>help('modules')</i>
 <h5>Output</h5> 
-<img src="com.jpg"/>
+<img src="Github%20images/modules.jpg"/>
 
