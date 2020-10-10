@@ -15,7 +15,7 @@ It allows us to develop applictions using an object oriented approach.In Python,
 - Encapsulation
 - Data Abstraction
 
-![Concepts of OOPS in python](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/OOPs.png)
+![Concepts of OOPS in python](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/OOPs.png)
 
 
 > This main objective of this documentation is to make understand these concepts in a "Simple way".
@@ -46,7 +46,7 @@ Everything in python is an object and almost everything has attributes and metho
 
 we create object by specifying a variable to the class
 
- ![Class-Objects](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/oop_car.jpg)
+ ![Class-Objects](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/oop_car.jpg)
 
 ***Syntax***
 ```
@@ -79,7 +79,7 @@ We have 5 types of inheritance
 
 > It provides re-usability of the code
 
-![Inheritance pictorial details](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/inheritance.jpg)
+![Inheritance pictorial details](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/inheritance.jpg)
 
 **:mag_right: Polymorphism:**
 
@@ -89,7 +89,7 @@ The name polymorphism itself contains two words "Ploy" and "morphs". poly means 
 
 You have a class animal, and all animals have voice. But they speak diiferently. Here the 'Speak' behaviour is polymorphic, in the sense and depends on the animal.So, the abstract "animal" concept does not actually "speak" , but specific animals (like dogs and cats) have a concrete implementation of the action "speak".
 
-![Pictorail explanation about polymorphism](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/polymorphism.gif)
+![Pictorail explanation about polymorphism](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/polymorphism.gif)
 
 **:mag_right: Encapsulation:**
 
@@ -99,7 +99,7 @@ Encapsulation is also an important aspect of the object-oriented programming. It
    
    > we can understand this concept in detail, by looking at an example which is in "Bommidi_Python_OOPS.ipynb" file.
    
-   ![Pictorial explanation about Encapsulation](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/Encapsulation.jpg)
+   ![Pictorial explanation about Encapsulation](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/Encapsulation.jpg)
 
 **:mag_right: Data Abstraction:**
 
@@ -107,7 +107,7 @@ Data abstraction is achieved through encapsulation. So that's why, Data abstract
 
 Abstraction is used to hide internal details and show only functionalities. Abstracting something means to give names to things so that the name captures the core of what a function or a whole program does.
 
-![Pictorial explanation of data abstraction](https://github.com/bgayathri0606/Open-contributions/blob/master/Github%20images/data_abstraction.png)
+![Pictorial explanation of data abstraction](https://github.com/DevIncept/Python-Module-2/blob/master/Github%20images/data_abstraction.png)
 
 
 
