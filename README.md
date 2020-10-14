@@ -14,6 +14,6 @@
 12. [Part7: OOPS in Python Notebook](Part7-OOPS.ipynb)
 13. [Part8: Error and Exception Handling in Python](Part8-Error-and-Exception-Handling.md)
 14. [Part8: Error and Exception Handling in Python Notebook](Part8-Error-and-Exception-Handling.ipynb)
-15. [Part6: Working with files in python](Part9-File-Handling.md)
-16. [Part6: Working with files in python notebook](Part9-File-Handling.ipynb)
+15. [Part9: Working with files in python](Part9-File-Handling.md)
+16. [Part9: Working with files in python notebook](Part9-File-Handling.ipynb)
 17. [Competition-Python 2](Competition-Python-2.md)
