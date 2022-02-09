@@ -1,4 +1,4 @@
-https://2.bp.blogspot.com/-7Fj1bZ4UAfM/W0EIT1Ts7JI/AAAAAAAAAl4/-E7205nyxC8XRYtH8z2d5B9aeL2sMjPpQCLcBGAs/s1600/Polymorphism_In_Csharp.png<p align="center">
+<p align="center">
    <img src="https://miro.medium.com/max/1200/1*PPIp7twJJUknfohZqtL8pQ.png" alt="Python Programming"
         width="500" height="150">
    <br />
