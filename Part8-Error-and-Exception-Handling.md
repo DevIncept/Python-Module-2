@@ -1,138 +1,367 @@
-# Errors & Exceptions
+# **Errors And Exceptions in Python**
 
-## What are Errors?
-Errors are the problems in a program due to which the program will stop the execution. They are almost always the fault of the programmer. The process of finding and eliminating errors is called debugging. Basically, there are two types of Errors:-
-* Syntax Error
-* Logical Error
+In this we are going to discuss about the error and exceptions in Python.</br>
 
-### Syntax Error
-Syntax errors occurs when we violate the rules of Python and they are the most common kind of error that we get while learning a new language. For example,
+When we develop a program for some task,generation of Errors and Exceptions is obvious .
+A programmer needs to find these errors and try to fix them until the program become error free.
+This process is called **debugging**.</br>
 
-![shortcut](Github%20images/Syntax.jpg)
+</br>Errors are the problems in a program due to which the program will stop the execution. On the other hand, Exceptions are basically the error that is  raised after passing the syntax text during the runtime  of the program. 
 
-In the aforementioned code we have missed the ':' before the keyword print.
+
+Normally , A Python program terminates as soon as it encounters an error.</br>
+Error in Python can be of two types i.e.</br> - ***Syntax errors*** </br> - ***Logical Error*** (*Exceptions*)
+
+Let Us discuss the both of them in details in below .
+1
+## **Syntax Error**
+
+Basically the name Syntax Error says it all .This is the error caused for writing the wrong syntax .It normally happens when we start learning new language like Python,C++,C,etc...</br>
+For example ,
+```Python
+>>> i=5
+>>> if i == 5 print(i)
+  File "<stdin>", line 1
+    if i == 5 print(i)
+              ^
+SyntaxError: invalid syntax
+>>>
+```
+In the above code  we have missed the ‘:’ before the keyword print so it shows syntaxerror.
 
 Common Python Syntax errors include:
-* leaving out a keyword
-* putting a keyword in the wrong place
-* leaving out a symbol, such as a colon, comma or brackets
-* misspelling a keyword
-* incorrect indentation
-* empty block
 
-### Logical Error
-Logical errors are the most difficult to fix. They may occur due to wrong algorithm or logic to solve a particular program. They occur when the program runs without crashing, but produces an incorrect result. You won’t get an error message, because no syntax or runtime error has occurred. You will have to find the problem on your own by reviewing all the relevant parts of your code – although some tools can flag suspicious code which looks like it could cause unexpected behaviour.
+- leaving out a keyword
+- putting a keyword in the wrong place
+- leaving out a symbol, such as a colon, comma or brackets
+- misspelling a keyword
+- incorrect indentation
+- empty block
 
-Here are some examples of mistakes which lead to logical errors:
-* using the wrong variable name
-* indenting a block to the wrong level
-* using integer division instead of floating-point division
-* getting operator precedence wrong
-* making a mistake in a boolean expression
-* off-by-one, and other numerical errors
 
-## What are Exceptions?
-Even if a statement is syntactically correct, it may still cause an error when executed. Such errors that occur at run-time(or during execution) are known as exceptions. An exception is an event, which occurs during the execution of a program and disrupts the normal flow of the program's instructions. When a program encounters a situation which it cannot deal with, it raises an exception. Let us see some examples in which exceptions occurs.
+ 
+Above , We have learnt about the Syntax Error in Python now lets learn about the exceptions in Python.
+## **What Is Exception ?**
 
-![shortcut](Github%20images/Exception.jpg)
+As in Introduction , We discussed that **Exception** are the error that occurs at the execution [*Run-time*] of the program .
+Eventhough a statement is syntactically correct, it may still cause an error when executed .</br>In general we can say when a program encounters a problem  which it cannot deal with, it raises an exception. It does not stop the execution of the program but it changes the normal flow of the program.
 
-## Handling Exceptions
-We can handle exceptions in our program by using try block and except block. A critical operation which can raise exception is placed inside the try block and the code that handles exception is written in except block. The Syntax for try-except block can be given as:
+Let It understand by example 
+```Python
+>>> print(100/0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>>
+```
 
-![shortcut](Github%20images/Try_Exception.jpg)
+In the above example , 
+Python throws the **ZeroDivisionError** Exception .The Exception raised as we are trying to divide the number i.e. 100 in my case by 0.
 
-The picture below shows you how the exception is handled in a program.
+Let take another example 
 
-![shortcut](Github%20images/Flowchart.jpg)
+```Python
+>>> a = 'devincept'
+>>> b = 12
+>>> print (a + b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>>
+```
+In the above example , 
+Python throws the **TypeError** Exception .The Exception raised as we are trying to concatenate int to str
 
-Now, let's take a look at an example to better understand how an exception is handled in a program.
 
-![shortcut](Github%20images/Exception_Example.jpg)
 
-The output of the aforementioned program is given below:
+### **Python Built-In Exceptions** :
+There are several built-in exceptions in Python that are raised when corresponding error occurs .Some Of them are  :-
+- ModuleNotFoundError
+- ImportError
+- MemoryError
+- OSError
+- SystemError
+- ... And so on
+  
+We can check all the inbuilt exceptions using the built-in *local()* function as follows:
 
-![shortcut](Github%20images/Exception_Example_Output.jpg)
+```Python
+print(dir(locals()['__builtins__']))
+```
 
-## Multiple Except Blocks
-Pyhton allows you to have multiple except blocks for a single try block. The block which matches with the exception generated will get executed. A try block can be associated with more than one except block to specify handlers for different exceptions. However, only one handler will be executed. Exception handlers only handle exceptions that occur in the corresponding try block. The syntax for specifying multiple except blocks for a single try block can be given as,
 
-![shortcut](Github%20images/Multiple_Exception.jpg)
+***locals()['__builtins__']***
+will return a module of built-in exceptions, functions, and attributes. ***dir*** allows us to list these attributes as strings.
 
-Now, let's take a look at an example to better understand this.
+```Python
 
-![shortcut](Github%20images/Multiple_Exception_Example.jpg)
+>>> print(dir(locals()['__builtins__']))
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+>>>
+```
 
-The output of the aforementioned program is given below:
 
-![shortcut](Github%20images/Multiple_Exception_Example_Output.jpg)
+### **Exception Handling In Python**
 
-Note that after the execution of the except block, the program control goes to the first statement after the except block for that try block.
+We have seen the many built in function in the above section .
+Now , in this we will see how we can handle this exceptions .
 
-## Error checks vs exception handling
-Exception handling gives us an alternative way to deal with error-prone situations in our code. Instead of performing more checks before we do something to make sure that an error will not occur, we just try to do it – and if an error does occur we handle it. This can allow us to write simpler and more readable code. Let’s look at a more complicated input example – one in which we want to keep asking the user for input until the input is correct. We will try to write this example using the two different approaches:
+Lets take an instance ,</br>
 
-![shortcut](Github%20images/Error_checks.jpg)
+We know that when a program encounters an Exception , then our program terminates with a default error message and most of the time we may want to show the custom message or run a different set of code rather than showing the default error message .
 
-In the first code snippet, we have to write quite a convoluted check to test whether the user’s input is an integer – first we strip off a minus sign if it exists, and then we check if the rest of the string consists only of digits. But there’s a very simple criterion which is also what we really want to know: will this string cause a ValueError if we try to convert it to an integer? In the second snippet we can in effect check for exactly the right condition instead of trying to replicate it ourselves – something which isn’t always easy to do. For example, we could easily have forgotten that integers can be negative, and written the check in the first snippet incorrectly.
+This is said to be **Exception Handling** . Basically It is the process of responding the exceptions in a custom way during the execution of the program .
 
-## The *else* and *finally* Clause
-The try...except block can optionally have an *else clause*, which, when present, must follow all except blocks. The statements in the *else* block is executed only if the try clause does not raise an exception. For example, the codes given below illustrate both the cases. This will help you to visulaize the relevance of the *else* block.
+In Python We Use try-except block to handle exception
 
-Now, let's take a look at an example to better understand this.
+## **The try-expect statement**
 
-![shortcut](Github%20images/Else_example.jpg)
+If the Python program contains code that may raise the exception, we must place that code in the try block. The try block must be followed with the except statement, which contains a block of code that will be executed if there is some exception in the try block.
 
-The output of the aforementioned program is given below:
+**Syntax**:-
+```Python
+# other code
+try:    
+    #block of code     
+    
+except ExceptionName:    
+    #block of code    
+      
+#other code    
+```
 
-![shortcut](Github%20images/Else_example_output.jpg)
+Now, let’s take a look at an example to better understand how an exception is handled in a program.
+#### **Code**
+```Python
+try:  
+    a = int(input("Enter a:"))    
+    b = int(input("Enter b:"))    
+    c = a/b  
+except:  
+    print("Can't divide with zero")  
+```
 
-The *try* block has another optional block called finally which is used to define clean-up actions that must be executed under all circumstances. The *finally* block is always executed before leaving the *try* block. This means that the statements written in *finally* block are executed irrespective of whether an exception has occured or not.
+#### **Output**
 
-Now, let's take a look at an example to better understand this.
+```Python
+Enter a:10
+Enter b:0
+Can't divide with zero
+```
 
-![shortcut](Github%20images/Finally_example.jpg)
+In the above code first try code is being executed and then if an exception happpened then the except block code is being executed.
 
-The output of the aforementioned program is given below:
 
-![shortcut](Github%20images/Finally_example_output.jpg)
+## **Multiple Except Blocks**
 
-## Built-in and User-defined Exceptions
-The following table lists some standard exceptions that are already defined in Python. These built-in exceptions force your program to output an error when something in it goes wrong.
+### **Multiple Except Statements**
 
-|       Exception      |                                              Description                                                | 
-|----------------------|---------------------------------------------------------------------------------------------------------|
-| Exception            | Base class for all exceptions                                                                           | 
-| StopIteration        | Generated when the next() method of an iteratordoes not point to any object                             |
-| SystemExit           | Raised by sys.exit() function                                                                           |
-| StandardError        | Base class for all built-in exceptions                                                                  |
-| ArithmeticError      | Base class for errors that are generated due to mathematical calculations                               |
-| OverflowError        | Raised when the maximum limit of a numeric type is exceeded during a calculation                        |
-| FloatingPointError   | Raised when a floating point calculation could not be performed                                         |
-| ZeroDivisionError    | Raised when a number is divided by zero                                                                 |
-| AssertionError       | Raised when the assert statement fails                                                                  |
-| AttributeError       | Raised when attribute reference or assignment fails                                                     |
-| EOFError             | Raised when end-of-file is reached or there is no input for input() function                            |
-| ImportError          | Raised when an import statement fails                                                                   |
-| KeyboardInterrupt    | Raised when the user interupts program execution (by pressing Ctrl+C)                                   |
-| LookupError          | Base class for all lookup errors                                                                        |
-| IndexError           | Raised when an index is not found in a sequence                                                         |
-| KeyError             | Raised when a key is not found in the dictionary                                                        |
-| NameError            | Raised when an identifier is not found in local or global namespace                                     |
-| UnboundLocalerror    | Raised when an attempt to access a local variable in function or method when no value is asigned to it  |
-| IOError              | Raised when input or output operation fails                                                             |
-| SyntaxError          | Raised when there is a syntax error in the program                                                      |
-| IndentaionError      | Raised when there is an indentation problem in the program                                              |
-| SystemError          | Raised when an internal system error occurs                                                             |
-| ValueError           | Raised when the arguments passed to a function are of invalid types or searching for non-existing value |
-| RuntimeError         | Raised when the generated error does not fall into any of the above category                            |
-| NotImplementedError  | Raised when an abstract method that needs to be implemented in an inherited class is not implemented    |
-| TypeError            | Raised when two or more data types are mixed without coercion                                           |
 
-Besides these, Python allows programmers to create their own exceptions by creating a new exception class. The new exception class is derived from the base class *Exception* which is pre-defined in Python. The program given below explains this concept.
+In Python , You can have multiple except blocks for a single try statement.A try block can have more than one except block to specify handlers for different exceptions.  The statement that  matches with the exception generated the code inside it will get executed. However, only one handler will be executed. Exception handlers only handle exceptions that occur in the corresponding try block. The syntax for specifying multiple except blocks for a single try block is :
 
-![shortcut](Github%20images/User_defined_example.jpg)
 
-The output of the aforementioned program is given below:
+**Syntax**:-
+```Python
+# other code
+try:    
+    #block of code     
+    
+except ExceptionName1:    
+    #block of code 
+except ExceptionName2:    
+    #block of code    
 
-![shortcut](Github%20images/User_defined_example_output.jpg)
+#other code    
+```
+Now, let’s take a look at an example to better understand it
+#### **Code**
+```Python
+try:  
+    a = int(input("Enter number a:"))    
+    print(a**2)   
+      
+except (KeyboardInterrupt):  
+    print("You should enter the number")
 
+except (ValueError):
+    print("Please Check the datatype before you enter")
+```
+
+#### **Output**
+
+```Python
+Enter number a:xyz
+Please Check the datatype before you enter
+```
+
+In the above code first try code is being executed we have taken the input as 'xyz' and then there is  exception happpened i.e. ValueError as the datatype is being wrong as we have to give input an interger value wherea as we have enterned string datatype so the ValueError block code is being executed and output is being showed.
+
+
+
+### **Multiple Exception In single Except Block**
+
+In python ,You can also use the same except statement to handle multiple exceptions as follows −
+
+
+**Syntax**:-
+```Python
+# other code
+try:    
+    #block of code     
+    
+except (<ExceptionName1>,<ExceptionName2>):    
+    #block of code   
+      
+#other code    
+```
+
+Now, let’s take a look at an example to better understand how an exception is handled in a program.
+#### **Code**
+```Python
+try :
+	a = 3
+	if a < 4 :
+		b = a/(a-3)
+	
+	print ("Value of b = ", b)
+except(ZeroDivisionError, NameError):
+	print ("Error Occurred and Handled")
+ 
+```
+
+#### **Output**
+
+```Python
+Error Occurred and Handled
+```
+
+In the above code first try code is being executed and then the except block code is being executed as the exception occured is ZerodivisionError.
+
+### **The Else Clause**
+
+In Python, using the else statement, you can instruct a program to execute a certain block of code  that you want in the absence of exceptions.
+
+**Syntax**:-
+```Python
+# other code
+try:    
+    #block of code     
+    
+except ExceptionName:    
+    #block of code    
+else:
+    #block of code
+
+#other code    
+```
+Now, let’s take a look at an example to better it
+#### **Code**
+```Python
+try:  
+    a = int(input("Enter a:"))    
+    b = int(input("Enter b:"))    
+    c = a/b  
+except:  
+    print("Can't divide with zero")
+
+else:
+    print(c)  
+```
+
+#### **Output**
+
+```Python
+Enter a:10
+Enter b:5
+2.0
+```
+
+In the above code first try code is being executed and then there is no exception happpened so the else block code is being executed and output is being showed.
+
+### **The Finally Clause**
+
+You can use a finally: block along with a try: block. In Python  finally keyword is the keyword that is executed always irrespective of whether an exception has occured or not after try and except blocks.
+
+
+**Syntax**:-
+```Python
+# other code
+try:
+       # Some Code.... 
+
+except:
+       # optional block
+       # Handling of exception (if required)
+
+else:
+       # execute if no exception
+
+finally:
+      # Some code .....(always executed)   
+```
+
+Now, let’s take a look at an example to better understand it
+#### **Code**
+```Python
+try:
+	k = 5//0 
+	print(k)	
+except ZeroDivisionError:
+	print("Cannot divide by zero")
+	
+finally:
+	print('This is always executed')
+
+```
+
+#### **Output**
+
+```Python
+Cannot divide by zero
+This is always executed
+```
+
+In the above code first try code is being executed and then an exception happpened then the except block code is being executed and then the finally block is being executed.
+
+## **Raising Exceptions**
+
+You can also raise exception by using the raise clause in Python.This comes into picture when we need to raise an exception to stop the execution of program.
+
+To raise an exception , you must use exception class name followed by raise statement.
+You can also give value to the exception in the parenthesis.
+You can access the value by using "as" keyword.
+"e" keyword is used as an reference variable which stores the value of the exception.
+
+**Syntax**:-
+```Python
+raise Exception_class,<value>      
+```
+
+
+Now, let’s take a look at an example to better understand it
+
+#### **Code:-**
+```Python
+
+try:
+	raise NameError("Hi there") # Raise Error
+except NameError:
+	print ("An exception")
+	raise # To determine whether the exception was raised or not
+
+```
+
+
+The output of the above code will simply line printed as “An exception” but a Runtime error will also occur in the last due to raise statement in the last line. So, the output on your command line will look like :-
+#### **Output**
+
+```Python
+Traceback (most recent call last):  
+  File "c:/Users/dwibe/Desktop/devincept/Error And Exceptions/abc.py", line 3, in <module>    
+    raise NameError("Hi there") # Raise Error
+NameError: Hi there
+```
+
+
+## **Conclusion**
+Hopefully, this article helped you understand the Error and Exceptions In Python tand how to  deal with these  exceptions i.e. Exception Handling.
